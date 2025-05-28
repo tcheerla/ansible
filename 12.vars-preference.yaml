@@ -11,7 +11,10 @@
     private: false
   tasks:
   - name: print the greeting
-    vars:
-      GREETING: "Hello from TASK"
+    # vars:
+    #   GREETING: "Hello from TASK"
     ansible.builtin.debug:
       msg: "{{ GREETING }}"
+
+# 1. command line or args
+# 2. Task
