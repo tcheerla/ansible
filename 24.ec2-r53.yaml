@@ -3,7 +3,7 @@
   connection: local
   vars:
     instances:
-    - mysqllll
+    - mysql
     - backend
     - frontend
     subnet_id: subnet-0984d47e985171bd0
@@ -19,3 +19,8 @@
       tags:
         Name: "{{ item }}"
     loop: "{{ instances }}"
+    register: ec2_output
+
+  - name: print ec2_output
+    ansible.builtin.debug:
+      msg: "{{ ec2_output }}"
