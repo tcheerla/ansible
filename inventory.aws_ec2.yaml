@@ -3,7 +3,7 @@ regions:
 - us-east-1
 keyed_groups:
 - key: tags.Name #dynamic-frontend
-  prefix: "dynamic"
+  prefix: "dynamic-"
   separator: "-"
 filters:
   tag:Name: frontend
